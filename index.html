@@ -7,9 +7,100 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<header class="page-header">
+    <div class="container">
+        <h1 class="page-logo">
+            <a href="" class="page-logo-link">
+                Sit <span>on</span> chair
+            </a>
+        </h1>
+
+        <nav class="page-nav">
+            <ul class="page-nav-list">
+                <li class="page-nav-list-el">
+                    <a href="" class="page-nav-list-link">O firmie</a>
+
+                    <ul class="page-nav-sublist">
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Aktualnosci</a></li>
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Nasz team</a></li>
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Historia</a></li>
+                    </ul>
+
+                </li>
+                <li class="page-nav-list-el">
+                    <a href="" class="page-nav-list-link">Galeria</a>
+                </li>
+                <li class="page-nav-list-el">
+                    <a href="" class="page-nav-list-link">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="main-banner">
+    <div class="container"> <!-- Zeby wysrodkowac i zrobic marginesy z prawej i lewej -->
+    <div class="banner"> <!-- Cale tlo wlasciwie -->
+        <button class="banner-prev">
+            &lt;
+        </button>
+
+        <button class="banner-next">
+            &gt;
+        </button>
+
+        <div class="banner-slides"> <!-- Kontner na slajdy-->
+            <div class="banner-slide banner-slide-active"> <!-- Dzieki klasie active i paru linijkom kodu w js mozna latwo ogarnac slajder. Klasa active to ta widoczna-->
+
+            </div>
+
+            <div class="banner-slide">
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="main-contact">
+    <div class="container">
+        <h2 class="section-title">Kontakt</h2>
+        <form class="form clearfix">
+            <!-- Tutaj dajemy clearfix, bo elementy zawarte wewnatrz tego diva maja floaty-->
+            <div class="form-left">
+                <div class="form-row">
+                    <label for="name" class="visuallyhidden">Imie</label>
+                    <input type="text" placeholder="Imie" id="name" name="name">
+                </div>
+                <div class="form-row">
+                    <label for="email" class="visuallyhidden">Email</label>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                </div>
+                <div class="form-row">
+                    <label for="message" class="visuallyhidden">Wiadomosc</label>
+                    <textarea placeholder="Wiadomosc" id="message" name="message"></textarea>
+                </div>
+            </div>
+
+            <div class="form-right">
+                <div class="form-addon"></div>
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input">
+                    <span class="checkbox-icon"></span>Zgadzam sie na przetwarzanie danych osobowych.
+                </label>
+
+                <button type="submit" class="btn btn form-btn">Wyslij</button>
+            </div>
+        </form>
+    </div>
+
+</section>
 </body>
 </html>
