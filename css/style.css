@@ -1,9 +1,9 @@
 :root {
-    --color: #24BAA0  /* robimy se z tego zmienna, zeby pozniej sobie uzywac*/
+    --color: #24BAA0;
+    --greycolor: #f2f2f2;
 }
 
-*
-{
+* {
     box-sizing: border-box;
 }
 
@@ -30,39 +30,17 @@
     white-space: nowrap;
 }
 
-.section-title {
-    font-size: 22px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-    position: relative;
-    margin-bottom: 45px;
-}
-
-.section-title:after {
-    content: "";
-    height: 7px;
-    width: 325px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color);
-
-}
-
 body {
     font-family: 'Raleway', sans-serif;
 }
 
+/* HEADER */
+
 .page-header {
     height: 40px;
     background: #000;
-    position: relative; /* musi byc, zeby z-index dzialalo*/
-    z-index: 100; /* Klasa rodzica pociaga tez dzieci do przodu, dzieki temu menu bedzie widoczne po najechaniu nawet jak jakies inne elementy pojawia sie pozniej. Jak tego nie damy to przykryja i nie bedziemy w stanie wysunac menu.*/
-}
-
-.page-header .container {
-
+    position: relative;
+    z-index: 100;
 }
 
 .page-logo {
@@ -75,19 +53,15 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
-    line-height: 40px; /* to sie daje, zeby wysrodkowac w pionie */
+    line-height: 40px;
 }
 
 .page-logo-link span {
-    color:var(--color);
+    color: var(--color);
 }
 
 .page-nav {
     float: right;
-}
-
-.page-nav-list {
-
 }
 
 .page-nav-list-el {
@@ -114,7 +88,6 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: 0.5s opacity;
-    /* to opacity i visibility musza byc jak sie ma pojawiac plynnie. w jednym elemencie dajemy opacity:0 i visibility:hidden, a w drugim opacity:1 i visibility:visible. No i of kors transition. Transition zmienia plynnie*/
     position: absolute;
     background: black;
     min-width: 150px;
@@ -122,13 +95,13 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     padding: 15px;
-
 }
 
-.page-nav-list-el:hover .page-nav-sublist{
+.page-nav-list-el:hover .page-nav-sublist {
     opacity: 1;
     visibility: visible;
 }
+
 .page-nav-sublist:before {
     content: '';
     width: 10px;
@@ -141,12 +114,12 @@ body {
 }
 
 .page-nav-sublist:after {
-    content:'';
+    content: '';
     position: absolute;
-    left:0;
-    top:-10px;
-    right:0;
-    height:10px;
+    left: 0;
+    top: -10px;
+    right: 0;
+    height: 10px;
     background: transparent;
 }
 
@@ -163,7 +136,7 @@ body {
     font-size: 15px;
 }
 
-/* Main banner */
+/* SLIDER */
 
 .main-banner {
     height: 500px;
@@ -176,8 +149,7 @@ body {
 }
 
 .banner-prev,
-.banner-next
-{
+.banner-next {
     position: absolute;
     left: 0;
     top: 0;
@@ -192,7 +164,7 @@ body {
 
 .banner-next {
     right: 0;
-    left: auto; /* Mozna dac tez initial, to kasuje pryzklejenie do lewej*/
+    left: auto;
 }
 
 .banner-prev:focus,
@@ -201,7 +173,7 @@ body {
 }
 
 .banner-slides {
-    background: yellow;
+    background: transparent;
     height: 100%;
     margin: 0 100px;
     position: relative;
@@ -219,26 +191,298 @@ body {
     opacity: 1;
     z-index: 2;
 }
-/* Main banner koniec*/
+
+.banner-slide-hidden {
+    opacity: 0;
+    z-index: -10;
+}
+
+.slide-left {
+    float: left;
+    width: 45%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.slide-right {
+    float: right;
+    width: 55%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+}
+
+.first-slide-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.first-slide-title span {
+    color: var(--color);
+}
+
+.first-slide-text {
+    margin-bottom: 30px;
+}
+
+.first-slide-button {
+    font-size: 22px;
+    width: 250px;
+    color: #fff;
+    background: var(--color);
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRODUCTS PRESENTATION */
+.products-col {
+    width: 33.3333%;
+    float: left;
+    padding: 40px 0;
+}
+
+.products-col-text {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 20px;
+    line-height: 1.2em;
+}
+
+.product-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.products-article {
+    margin-bottom: 10px;
+}
+
+.products-article:last-of-type {
+    margin-bottom: 0;
+}
+
+.product-img {
+    position: absolute;
+}
+
+.product-name {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    width: 329px;
+    height: 50px;
+    position: relative;
+    bottom: -160px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.product-name:after,
+.product-title:after {
+    content: "";
+    height: 7px;
+    width: 150px;
+    display: block;
+    position: relative;
+    bottom: -5px;
+    left: -2px;
+    background-color: var(--color);
+}
+
+/* PRICE OPTIONS */
+
+.section-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.section-title:after {
+    content: "";
+    height: 7px;
+    width: 325px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+
+}
+.price-list {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+}
+
+.price-col {
+    width: 31%;
+    height: 500px;
+    float: left;
+    margin-right: 20px;
+    border: 2px solid var(--color);
+    display: block;
+    position: relative;
+}
+
+.price-col:nth-of-type(2n+1) {
+    border: 2px solid lightgrey;
+}
+
+.price-col:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.price-col:nth-of-type(2n+1):after {
+    background-color: lightgrey;
+}
+
+.price-col:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-col:nth-of-type(2n+1):before {
+    background-color: white;
+    border: 2px solid lightgrey;
+}
+
+.price-col:nth-last-of-type(2n+1) {
+    background-color: white;
+}
+
+.price-col:nth-last-of-type(2) {
+    background: var(--color);
+}
+
+.price-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.price-col:nth-of-type(2n+1) .price-title {
+    color: var(--color);
+}
+
+.round-price {
+    border: 2px solid white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 26px;
+    height: 120px;
+    width: 120px;
+    margin: 30px auto;
+    color: var(--color);
+    background-color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.price-col:nth-of-type(2n+1) .round-price {
+    color: lightgrey;
+    border: 2px solid lightgrey;
+}
+
+.big-price {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sub {
+    vertical-align: super;
+    font-size: 14px;
+}
+
+.currency {
+    font-size: 14px;
+}
+
+.benefit-list ul li {
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    background-color: var(--greycolor);
+    color: grey;
+    width: 100%;
+    display: inline-block;
+}
+
+.benefit-list ul li:nth-of-type(2n+1) {
+    background-color: lightgrey;
+}
+
+.benefit-list.center ul li:nth-of-type(2n+1) {
+    background-color: white;
+}
+
+.button-join {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 120px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color);
+    color: white;
+}
+
+.price-col:nth-of-type(2) .button-join {
+    background-color: white;
+    color: var(--color);
+}
+
+/* CONTACT */
 
 .main-contact {
     padding: 40px 0;
 }
 
-.form {
-
-}
 .form-row {
     margin-bottom: 20px;
 }
 
-.form-left {
-    width: 635px;
+.form-label {
+    width: 62%;
     float: left;
 }
 
-.form-right {
-    width: 345px;
+.form-submit {
+        width: 34%;
     float: right;
 }
 
@@ -250,7 +494,7 @@ body {
     margin-bottom: 35px;
 }
 
-.form input[type="text"], /* dajemy przecinki, zeby ostylowac kilka klas na raz */
+.form input[type="text"],
 .form input[type="email"],
 .form textarea {
     padding: 20px;
@@ -264,18 +508,21 @@ body {
 
 .form textarea {
     min-height: 185px;
-    resize: vertical; /* mozna w ogole nie pozwalac na zmiane rozmiaru, a mozna dac tak jak tu, ze tylko w pionie*/
+    resize: vertical;
 }
 
 .form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #ccc;
 }
+
 .form ::-moz-placeholder { /* Firefox 19+ */
     color: #ccc;
 }
+
 .form :-ms-input-placeholder { /* IE 10+ */
     color: #ccc;
 }
+
 .form :-moz-placeholder { /* Firefox 18- */
     color: #ccc;
 }
@@ -314,8 +561,6 @@ body {
     top: 0;
 }
 
-
-
 .checkbox-icon:after {
     content: "";
     background: url(../images/form_ok.jpg);
@@ -338,12 +583,43 @@ body {
 
 .btn {
     font-size: 34px;
-    color:#fff;
+    color: #fff;
     background: var(--color);
     padding: 15px;
     text-transform: uppercase;
     border-radius: 10px;
-    width: 100%;
+    width: 90%;
     border: none;
     cursor: pointer;
+}
+
+/* FOOTER */
+
+.page-footer-copyrights {
+    float: left;
+    color: #aaa;
+    padding-top: 15px;
+}
+
+.page-footer-name {
+    float: right;
+    padding-bottom: 30px;
+}
+
+.page-footer-icons {
+    float: left;
+    padding-right: 50px;
+}
+
+.page-footer-name span {
+    display: inline-block;
+    padding-top: 12px;
+    margin-right: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.page-footer-name span strong {
+    font-weight: 800;
 }

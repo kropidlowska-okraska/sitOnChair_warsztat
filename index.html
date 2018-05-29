@@ -8,99 +8,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <!--RESET-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- FONT AWESOME -->
+    <script src="https://use.fontawesome.com/6d3c3b735c.js"></script>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="page-header">
     <div class="container">
         <h1 class="page-logo">
-            <a href="" class="page-logo-link">
+            <a href="#" class="page-logo-link">
                 Sit <span>on</span> chair
             </a>
         </h1>
-
         <nav class="page-nav">
             <ul class="page-nav-list">
                 <li class="page-nav-list-el">
-                    <a href="" class="page-nav-list-link">O firmie</a>
-
+                    <a href="" class="page-nav-list-link">About us</a>
                     <ul class="page-nav-sublist">
-                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Aktualnosci</a></li>
-                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Nasz team</a></li>
-                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Historia</a></li>
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">News</a></li>
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">Our team</a></li>
+                        <li class="page-nav-sublist-el"><a href="" class="page-nav-sublist-link">History</a></li>
+                        <!-- end of hidden sub-menu -->
                     </ul>
-
                 </li>
                 <li class="page-nav-list-el">
-                    <a href="" class="page-nav-list-link">Galeria</a>
+                    <a href="" class="page-nav-list-link">Gallery</a>
                 </li>
                 <li class="page-nav-list-el">
-                    <a href="" class="page-nav-list-link">Kontakt</a>
+                    <a href="" class="page-nav-list-link">Contact</a>
                 </li>
-            </ul>
+            </ul> <!-- end of main menu -->
         </nav>
     </div>
 </header>
 
+<!-- SLIDER -->
 <section class="main-banner">
-    <div class="container"> <!-- Zeby wysrodkowac i zrobic marginesy z prawej i lewej -->
-    <div class="banner"> <!-- Cale tlo wlasciwie -->
-        <button class="banner-prev">
-            &lt;
-        </button>
+    <div class="container">
+        <div class="banner">
+            <button class="banner-prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
 
-        <button class="banner-next">
-            &gt;
-        </button>
+            <button class="banner-next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </button>
 
-        <div class="banner-slides"> <!-- Kontner na slajdy-->
-            <div class="banner-slide banner-slide-active"> <!-- Dzieki klasie active i paru linijkom kodu w js mozna latwo ogarnac slajder. Klasa active to ta widoczna-->
+            <div class="banner-slides">
+                <div class="banner-slide banner-slide-active clearfix">
+                    <div class="slide-left">
+                        <img src="images/black_chair.png" alt="Black chair" class="first-slide-image">
+                    </div>
+                    <div class="slide-right">
+                        <h2 class="first-slide-title">sit <span>on</span> our <span>chair</span></h2>
+                        <p class="first-slide-text">
+                            Cupcake ipsum dolor. Sit amet carrot cake pie sesame snaps gummies. Cupcake biscuit sesame
+                            snaps gingerbread topping topping lollipop. Chupa chups bear claw donut fruitcake topping
+                            marzipan candy canes sesame snaps gummies. Sugar plum muffin sweet roll liquorice pie
+                            marshmallow. Brownie chocolate bar bear claw gummies jujubes danish.
+                        </p>
+                        <button class="first-slide-button">Show more</button>
+                    </div>
+                </div> <!-- end of slide -->
 
-            </div>
+                <div class="banner-slide banner-slide-hidden clearfix">
+                    <div class="slide-left">
+                        <img src="images/orange_chair.png" alt="Orange chair" class="first-slide-image">
+                    </div>
+                    <div class="slide-right">
+                        <h2 class="first-slide-title">sit <span>on</span> our <span>chair</span></h2>
+                        <p class="first-slide-text">
+                            Brownie apple pie chocolate cake lemon drops cake. Dessert sugar plum cheesecake marshmallow
+                            muffin. Cookie bear claw fruitcake chocolate bar icing dessert sugar plum muffin donut.
+                            Tiramisu candy gummies jelly beans gingerbread. Sweet candy cake gingerbread tootsie roll
+                            pastry gummi bears cheesecake.
+                        </p>
+                        <button class="first-slide-button">Show more</button>
+                    </div>
+                </div> <!-- end of slide -->
 
-            <div class="banner-slide">
-
+                <div class="banner-slide banner-slide-hidden clearfix">
+                    <div class="slide-left">
+                        <img src="images/red_chair.png" alt="Red chair" class="first-slide-image">
+                    </div>
+                    <div class="slide-right">
+                        <h2 class="first-slide-title">sit <span>on</span> our <span>chair</span></h2>
+                        <p class="first-slide-text">
+                            Marzipan apple pie cookie jelly beans sweet roll. Topping sugar plum dragée. Cupcake ice
+                            cream I love gummi bears cake jelly-o gummies cheesecake. Powder jelly pudding apple pie
+                            cupcake. I love soufflé ice cream. Lemon drops wafer fruitcake I love dessert cake oat cake.
+                        </p>
+                        <button class="first-slide-button">Show more</button>
+                    </div>
+                </div> <!-- end of slide -->
             </div>
         </div>
-    </div>
+    </div> <!-- end of container that contains slider -->
+</section>
+
+<!-- PRODUCTS PRESENTATION -->
+<section class="products clearfix">
+    <div class="products-row container">
+        <div class="products-col">
+            <img src="images/box1_img.jpg" alt="Chair CLAIR" class="product-img clearfix">
+            <p class="product-name">Chair CLAIRE</p>
+        </div> <!-- end of product -->
+        <div class="products-col">
+            <img src="images/box2_img.jpg" alt="Chair MARGARITA" class="product-img clearfix">
+            <p class="product-name">CHAIR MARGARITA</p>
+        </div> <!-- end of product -->
+        <div class="products-col">
+            <div class="products-col-text">
+                <h3 class="product-title">Finds all input</h3>
+                <p class="products-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor
+                    sit amet, consectetur adipisicing elit. Enim, officiis.</p>
+                <p class="products-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate
+                    exercitationem id laboriosam molestiae non, quia quod saepe unde! Magni. nesciunt.</p>
+            </div>
+        </div> <!-- end of text box -->
     </div>
 </section>
 
+<!-- PRICE OPTIONS -->
+<section class="price-list clearfix">
+    <div class="price-row container">
+        <h2 class="section-title">Price list</h2>
+
+        <div class="price-col">
+            <h3 class="price-title">Basic plan</h3>
+            <div class="round-price">
+                <span class="big-price">&nbsp;85<span class="sub">99</span></span><span
+                    class="currency">EUR/MONTH</span></div>
+            <div class="benefit-list">
+                <ul>
+                    <li>Purchase + transport</li>
+                    <li>Service</li>
+                </ul>
+            </div>
+            <button class="button-join">Join</button>
+        </div> <!-- end of col -->
+
+        <div class="price-col">
+            <h3 class="price-title">Standard plan</h3>
+            <div class="round-price"><span class="big-price">&nbsp;95<span class="sub">99</span></span><span
+                    class="currency">EUR/MONTH</span></div>
+            <div class="benefit-list center">
+                <ul>
+                    <li>Purchase + transport</li>
+                    <li>Service</li>
+                    <li>5 year guarantee</li>
+                </ul>
+            </div>
+            <button class="button-join">Join</button>
+        </div> <!-- end of col -->
+
+        <div class="price-col">
+            <h3 class="price-title">Advanced plan</h3>
+            <div class="round-price"><span class="big-price">&nbsp;211<span class="sub">00</span></span><span
+                    class="currency">EUR/MONTH</span></div>
+
+            <div class="benefit-list">
+                <ul>
+                    <li>Purchase + transport</li>
+                    <li>Service</li>
+                    <li>7 year guarantee</li>
+                    <li>Designer's advices</li>
+                </ul>
+            </div>
+            <button class="button-join">Join</button>
+        </div> <!-- end of col -->
+    </div>
+</section>
+
+<!-- CONTACT -->
 <section class="main-contact">
     <div class="container">
-        <h2 class="section-title">Kontakt</h2>
+        <h2 class="section-title">Contact</h2>
         <form class="form clearfix">
-            <!-- Tutaj dajemy clearfix, bo elementy zawarte wewnatrz tego diva maja floaty-->
-            <div class="form-left">
+            <div class="form-label">
                 <div class="form-row">
-                    <label for="name" class="visuallyhidden">Imie</label>
-                    <input type="text" placeholder="Imie" id="name" name="name">
+                    <label for="name" class="visuallyhidden">Name</label>
+                    <input type="text" placeholder="Name" id="name" name="name">
                 </div>
                 <div class="form-row">
                     <label for="email" class="visuallyhidden">Email</label>
                     <input type="email" placeholder="Email" id="email" name="email">
                 </div>
                 <div class="form-row">
-                    <label for="message" class="visuallyhidden">Wiadomosc</label>
-                    <textarea placeholder="Wiadomosc" id="message" name="message"></textarea>
+                    <label for="message" class="visuallyhidden">Message</label>
+                    <textarea placeholder="Message" id="message" name="message"></textarea>
                 </div>
             </div>
 
-            <div class="form-right">
+            <div class="form-submit">
                 <div class="form-addon"></div>
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox-input">
-                    <span class="checkbox-icon"></span>Zgadzam sie na przetwarzanie danych osobowych.
+                    <span class="checkbox-icon"></span>I hereby agree for processing my personal data.
                 </label>
-
-                <button type="submit" class="btn btn form-btn">Wyslij</button>
+                <button type="submit" class="btn btn form-btn">Send</button>
             </div>
         </form>
     </div>
-
 </section>
+
+<!--FOOTER -->
+<section class="page-footer">
+    <div class="container">
+        <div class="page-footer-copyrights">
+            <span>Copyright 2018 | All Rights Reserved. - Sit on Chair</span>
+        </div>
+        <div class="page-footer-name">
+            <div class="page-footer-icons">
+                <img src="images/flickr.png" alt="Flickr icon">
+                <img src="images/vimeo.png" alt="Vimeo icon">
+                <img src="images/pinterest.png" alt="Pinterest icon">
+                <img src="images/twitter.png" alt="Twitter icon">
+            </div>
+            <span>SIT <strong>ON</strong> CHAIR</span>
+        </div>
+    </div>
+</section>
+
+<script src="app.js"></script>
 </body>
 </html>
